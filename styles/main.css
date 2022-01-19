@@ -1,0 +1,276 @@
+/* body custom styles */
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "sans-serif";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+
+/*================
+ Section Heading desing
+==========================*/
+.section-title{
+  text-align: center;
+  padding-bottom: .5rem;
+}
+
+.section-title h2 {
+  color:#fff;
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title p{
+    font-size: large;
+    font-weight: normal;
+    font-family: arial;
+    color: #fff;
+    overflow: hidden;
+    z-index: 99999;
+    position: sticky;
+}
+
+.letter_spacing{
+	letter-spacing:4px;
+}
+
+.text-black{
+	color:#000!important;
+}
+
+.section-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background:#5fcf80;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-bg:before {
+  content: "";
+  background: #1b1b1b;
+  position: absolute;
+  bottom: 60px;
+  top: 60px;
+  left: 0;
+  right: 0;
+  transform: skewY(-3deg);
+}
+
+/*========
+Portfolio area
+===================*/
+#portfolio {
+  margin: 2rem 0;
+  padding: 2rem 0;
+}
+
+#portfolio {
+  width: 100%;
+  height:100%;
+  background: url("../assets/img/portfolio/portfolio-bg.jpg") top center;
+  background-size: cover;
+  position: relative;
+}
+
+#portfolio:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.portfolio #portfolio-flters {
+    margin: 0px auto;
+    list-style: none;
+    text-align: center;
+    border-radius: 50px;
+    padding: 0px 15px;
+    padding-top: 8px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 20px 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  color:#fff;
+  margin: 0 4px 8px 4px;
+  transition: 0.3s;
+  border-radius: 50px;
+  border: 1px solid #5fcf80;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color:#fff;	
+  background: #5fcf80;
+  border: 1px solid #5fcf80;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background:rgba(45, 43, 43, 0.75);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap img {
+  transition: 1s;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color:#e3e3e3;
+  font-weight: 700;
+  font-family: oswald;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #fff;
+  background:#5fcf80;
+  margin: 10px 2px;
+  width:40px;
+  height:40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a i {
+  font-size:30px;
+  line-height: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  background: #5969f3;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+  top: 15px;
+  left: 15px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+  bottom: 15px;
+  right: 15px;
+}
+
+
